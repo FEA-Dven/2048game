@@ -1,0 +1,12 @@
+
+  <view class="userinfo"><image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"/></view>
+    <view class="userinfo-nickname">玩家：{{userInfo.nickName}}</view>
+    <view class="userinfo-nickname"/>
+<view class="container" bindtouchstart="start" bindtouchmove="move" bindtouchend="end">
+  <lable class="item d{{item}}"  wx:for="{{mydata}}">
+    {{item ? item : ''}}
+  </lable>
+</view>
+<modal title="提示" confirm-text="确定" no-cancel="no-cancel" hidden="{{gameover.status}}" bindconfirm="restart">
+  {{gameover.message}}
+</modal>
